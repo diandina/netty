@@ -63,7 +63,7 @@ public class SocksPortUnificationServerHandler extends ByteToMessageDecoder {
         if (in.writerIndex() == readerIndex) {
             return;
         }
-
+//
         ChannelPipeline p = ctx.pipeline();
         final byte versionVal = in.getByte(readerIndex);
         SocksVersion version = SocksVersion.valueOf(versionVal);
